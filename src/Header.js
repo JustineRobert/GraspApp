@@ -8,14 +8,16 @@ import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import ChatIcon from '@material-ui/icons/Chat';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
+
 function Header() {
     return (
         <div className="header">
             
             <div className="header__left">
                 <img 
-                src="https://media-exp1.licdn.com/dms/image/C4D22AQGWp20v6kGJhg/feedshare-shrink_1280-alternative/0/1610360252368?e=1613001600&v=beta&t=6OhXDBgUfUz20SVLh98RoGJ_4h0RtQsP6zUJUCwn4bQ" 
-                alt=""/>
+                src="https://media-exp1.licdn.com/dms/image/C4D22AQGWp20v6kGJhg/
+feedshare-shrink_1280-alternative/0/1610360252368?e=1613001600&v=beta&t=6OhXDBgUfUz20SVLh98RoGJ_4h0RtQsP6zUJUCwn4bQ" 
+                alt="GraspApp"/>
                 <div className="header__search">
                     <SearchIcon />
                     <input type="text"/>
@@ -27,9 +29,9 @@ function Header() {
                 <HeaderOption Icon={BusinessCenterIcon} title="Jobs"/>
                 <HeaderOption Icon={ChatIcon} title="Messaging"/>
                 <HeaderOption Icon={NotificationsIcon} title="Notifications"/>
+                <HeaderOption Icon={NotificationsIcon} title="COVID-19"/>
+                <HeaderOption avatar="https://avatars0.githubusercontent.com/u/29596487?s=32" title="Igune Justine Robert"/>
                 
-
-
             </div>
         </div>
     )
