@@ -15,8 +15,7 @@ function Header() {
             
             <div className="header__left">
                 <img 
-                src="https://media-exp1.licdn.com/dms/image/C4D22AQGWp20v6kGJhg/
-feedshare-shrink_1280-alternative/0/1610360252368?e=1613001600&v=beta&t=6OhXDBgUfUz20SVLh98RoGJ_4h0RtQsP6zUJUCwn4bQ" 
+                src="https://drive.google.com/drive/folders/1MnP1byygipjvqhCx-Tw3fJzlYRcRjnhx" 
                 alt="GraspApp"/>
                 <div className="header__search">
                     <SearchIcon />
