@@ -15,11 +15,11 @@ function Header() {
             
             <div className="header__left">
                 <img 
-                src="https://drive.google.com/drive/folders/1MnP1byygipjvqhCx-Tw3fJzlYRcRjnhx" 
+                src="https://cedat.mak.ac.ug/wp-content/uploads/2018/07/cropped-mak-logo-retina-1.png" 
                 alt="GraspApp"/>
                 <div className="header__search">
                     <SearchIcon />
-                    <input type="text"/>
+                    <input placeholder="Search" type="text"/>
                 </div>
             </div>
             <div className="header__right">
@@ -29,6 +29,7 @@ function Header() {
                 <HeaderOption Icon={ChatIcon} title="Messaging"/>
                 <HeaderOption Icon={NotificationsIcon} title="Notifications"/>
                 <HeaderOption Icon={NotificationsIcon} title="COVID-19"/>
+                <h6 className="header__right">Language Selection</h6>
                 <HeaderOption avatar="https://avatars0.githubusercontent.com/u/29596487?s=32" title="Igune Justine Robert"/>
                 
             </div>
