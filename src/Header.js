@@ -7,9 +7,21 @@ import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import ChatIcon from '@material-ui/icons/Chat';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import LanguageOutlinedIcon from '@material-ui/icons/LanguageOutlined';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, selectUser } from './features/userSlice';
+import { auth } from './firebase';
 
 
 function Header() {
+    const user = useSelector(selectUser);
+    const dispatch = useDispatch();
+
+    const logoutOfApp = () => {
+        dispatch(logout());
+        auth.signOut();
+    };
+
     return (
         <div className="header">
             
@@ -28,13 +40,12 @@ function Header() {
                 <HeaderOption Icon={BusinessCenterIcon} title="Jobs"/>
                 <HeaderOption Icon={ChatIcon} title="Messaging"/>
                 <HeaderOption Icon={NotificationsIcon} title="Notifications"/>
-                <HeaderOption Icon={NotificationsIcon} title="COVID-19"/>
-                <h6 className="header__right">Language Selection</h6>
-                <HeaderOption avatar="https://avatars0.githubusercontent.com/u/29596487?s=32" title="Igune Justine Robert"/>
+                <HeaderOption Icon={LanguageOutlinedIcon} title="Select Language"/>
+                <HeaderOption onClick={ logoutOfApp } avatar={true} title={user?.displayName}/>
                 
             </div>
         </div>
-    )
+    );
 }
 
 export default Header;
