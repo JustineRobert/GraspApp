@@ -33,9 +33,10 @@ function App() {
     })
    }, []);
   
-  return (
+   return (
     <div className="app">
-      <Header />
+    {/* header */}
+    <Header />
 
      {/* app body */}
     {!user ? (

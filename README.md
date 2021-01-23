@@ -1,3 +1,5 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/6fc746ef7dac489ebd54e14b616ef898)](https://www.codacy.com/gh/JustineRobert/GraspApp/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JustineRobert/GraspApp&amp;utm_campaign=Badge_Grade)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
