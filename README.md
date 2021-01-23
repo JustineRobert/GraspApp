@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b4d86882bf0e4e519aa9c333b1da4c56)](https://app.codacy.com/gh/JustineRobert/GraspApp?utm_source=github.com&utm_medium=referral&utm_content=JustineRobert/GraspApp&utm_campaign=Badge_Grade_Settings)
+
 In the project directory, you can run:
 
 ### `npm start`
