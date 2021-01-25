@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import HeaderOption from "./HeaderOption";
@@ -22,12 +22,15 @@ function Header() {
         auth.signOut();
     };
 
-    return (
+
+    return ( 
+    
+    
         <div className="header">
             
             <div className="header__left">
                 <img 
-                src="https://cedat.mak.ac.ug/wp-content/uploads/2018/07/cropped-mak-logo-retina-1.png" 
+                src="https://firebasestorage.googleapis.com/v0/b/graspapp-8cfb9.appspot.com/o/Logo%20IRRI%2021.png?alt=media&token=332124f4-7384-4b88-ae30-16de58a15c26" 
                 alt="GraspApp"/>
                 <div className="header__search">
                     <SearchIcon />

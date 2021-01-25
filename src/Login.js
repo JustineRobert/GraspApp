@@ -55,7 +55,7 @@ function Login() {
 
     return (
         <div className="login">
-            <img src="https://cedat.mak.ac.ug/wp-content/uploads/2018/07/cropped-mak-logo-retina-1.png" alt="GraspApp Logo" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/graspapp-8cfb9.appspot.com/o/Logo%20IRRI%2021.png?alt=media&token=332124f4-7384-4b88-ae30-16de58a15c26" alt="GraspApp Logo" />
 
             <form>
                 <input value={name} onChange={e=> setName(e.target.value)} placeholder="Full name (required if registering)" type="text" />
