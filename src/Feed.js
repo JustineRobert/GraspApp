@@ -29,8 +29,7 @@ function Feed() {
                     data: doc.data(),
                 }))
             )
-        );
-             
+        );   
     }, []);
 
     const sendPost = (e) => {
@@ -79,7 +78,7 @@ function Feed() {
                     timestamp={timestamp} 
                 />
             ))}
-            </FlipMove>   
+            </FlipMove>      
     </div>
     );
 }

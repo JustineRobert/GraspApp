@@ -18,9 +18,9 @@ function Header() {
     const dispatch = useDispatch();
 
     const logoutOfApp = () => {
-        dispatch(logout());
-        auth.signOut();
-    };
+        dispatch(logout())
+        auth.signOut()
+    }
 
 
     return ( 
@@ -48,7 +48,7 @@ function Header() {
                 
             </div>
         </div>
-    );
+    )
 }
 
 export default Header;
