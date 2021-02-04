@@ -22,10 +22,7 @@ function Header() {
         auth.signOut()
     }
 
-
     return ( 
-    
-    
         <div className="header">
             
             <div className="header__left">
@@ -44,7 +41,7 @@ function Header() {
                 <HeaderOption Icon={ChatIcon} title="Messaging"/>
                 <HeaderOption Icon={NotificationsIcon} title="Notifications"/>
                 <HeaderOption Icon={LanguageOutlinedIcon} title="Select Language"/>
-                <HeaderOption onClick={ logoutOfApp } avatar={true} title={user?.displayName}/>
+                <HeaderOption onClick={logoutOfApp} avatar={true} title={user?.displayName}/>
                 
             </div>
         </div>

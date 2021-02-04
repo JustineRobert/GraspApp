@@ -43,7 +43,7 @@ function Feed() {
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         });
         setInput("");
-    };
+    }
         
 
     return (
@@ -62,13 +62,12 @@ function Feed() {
                     <InputOption Icon={SubscriptionsIcon} title="Video" color="#E7A33E"/>
                     <InputOption Icon={EventNoteIcon} title="Event" color="#C0CBCD"/>
                     <InputOption Icon={CalendarViewDayIcon} title="Write Article" color="#7FC15E"/>
-
-                </div>
+                    </div>
             </div>
             
             { /* Posts */ }
             <FlipMove>
-            {posts.map(({id , data: { name, description, message, photoUrl, timestamp}}) => (
+            {posts.map(({id, data: { name, description, message, photoUrl, timestamp}}) => (
                 <Post 
                     key={id} 
                     name={name} 
