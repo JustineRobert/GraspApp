@@ -8,6 +8,7 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import { auth } from './firebase';
 import Widgets from './Widgets';
+import Chat from './Chat';
 
 
 function App() {
@@ -47,6 +48,11 @@ function App() {
         <Widgets/>
       </div>
     )}
+
+    <div className="sidebar__chat">
+    <Chat/>
+    </div>
+    
   </div>
   );
 }

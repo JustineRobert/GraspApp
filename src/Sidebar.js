@@ -3,16 +3,19 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
 import "./Sidebar.css";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import AddIcon from "@material-ui/icons/Add";
+import SidebarChannel from './SidebarChannel';
 
 function Sidebar() {
     const user = useSelector(selectUser);
 
-    const recentItems = (topic) => (
-        <div className="sidebar__recentItems">
-            <span className="sidebar__hash">#</span>
-            <p>{topic}</p>
-        </div>
-    )
+    //const recentItems = (topic) => (
+       // <div className="sidebar__recentItems">
+        //    <span className="sidebar__hash">#</span>
+        //    <p>{topic}</p>
+        // </div>
+   // )
 
     return (
         <div className="sidebar">
@@ -26,7 +29,7 @@ function Sidebar() {
             <div className="sidebar__stats">
                 <div className="sidebar__stat" >
                     <p>Who viewed you</p>
-                    <p className="sidebar__statNumber">2,505</p>
+                    <p className="sidebar__statNumber">2,505</p> 
                 </div>
                 <div className="sidebar__stat" >
                     <p>Viewed on post</p>
@@ -35,13 +38,30 @@ function Sidebar() {
             </div>
 
             <div className="sidebar__bottom">
-                <p>Refugee Available Services</p>
-                {recentItems('Livelihood Needs')}
+                <h3>Refugee Available Services <ExpandMoreIcon /></h3>
+
+                <div className="sidebar__channels">
+                <div className="sidebar__channelsHeader">
+                    <div className="sidebar__header">
+                    <ExpandMoreIcon />
+                    <h4>Text Channel</h4>
+                    </div>
+                 <AddIcon className="sidebar__addChannel" />
+                </div>
+            </div>
+
+            <div className="sidebar__channelsList">
+                <SidebarChannel />
+                <SidebarChannel />
+                <SidebarChannel />
+                <SidebarChannel />
+            </div>
+                {/*recentItems('Livelihood Needs')}
                 {recentItems('Survival Needs')}
                 {recentItems('Health Needs')}
-                {recentItems('Protection Needs')}
-        
+                {recentItems('Protection Needs')*/}  
             </div>
+            
         </div>
     );
 }
