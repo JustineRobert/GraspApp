@@ -9,6 +9,13 @@ import Sidebar from './Sidebar';
 import { auth } from './firebase';
 import Widgets from './Widgets';
 import Chat from './Chat';
+import { Map } from '@material-ui/icons';
+
+
+
+//import Map from "./Map";
+
+
 
 
 function App() {
@@ -16,10 +23,39 @@ function App() {
   const dispatch = useDispatch();
 
 
+
+  const pages = [
+    {
+      pageLink: '/',
+      view: Feed,
+      displayName: 'Feed',
+      showInNavbar: true,
+    },
+    {
+      pageLink: '/chat',
+      view: Chat,
+      displayName: 'Chat',
+      showInNavbar: true,
+    },
+    {
+      pageLink: '/widgets',
+      view: Widgets,
+      displayName: 'Widgets',
+      showInNavbar: true,
+    },
+    {
+      pageLink: '/map',
+      view: Map,
+      displayName: 'Map',
+      showInNavbar: true,
+    },
+  ];
+
+
   useEffect(() => {
     auth.onAuthStateChanged(userAuth => {
       if (userAuth) {
-        // User is logged in.
+        // User is logged in
         dispatch(login({
           email: userAuth.email,
           uid: userAuth.uid,
@@ -27,31 +63,36 @@ function App() {
           photoUrl: userAuth.photoURL
         }));
       } else {
-        // User is logged out.
+        // User is logged out
         dispatch(logout());
       }
     })
-   }, []);
+   }, [dispatch]);
   
    return (
     <div className="app">
-    {/* header */}
-    <Header />
+    
 
+    <Header
+    pages={pages}
+    />
      {/* app body */}
     {!user ?(
       <Login/>
       ) : (
       <div className="app__body">
-        <Sidebar/>
-        <Feed/>
-        <Widgets/>
+        <Sidebar
+        pages={pages}
+        />
+        <Feed />
+        <Widgets />
       </div>
     )}
-
     <div className="sidebar__chat">
-    <Chat/>
+        <Chat/>
     </div>
+        <Map />
+
     
   </div>
   );
